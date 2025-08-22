@@ -1,4 +1,20 @@
+# A Webb of Possibilities: An Open Source Hunt For Interstellar Life
+
+Evan Ortiz, Taylor Ranson (Texas State Univeristy, 2024)
+
+
+
 ![](docs/assets/banner1.png)
+
+## 🚀 Project Summary
+
+This repository demonstrates the use of **James Webb Space Telescope (JWST)** data to analyze the **protoplanetary disk IRAS-04385**, a target located 456 light-years away. The project highlights skills in **open data science, reproducible research, and astronomical data processing**. It addresses the challenge of making large JWST datasets accessible, reproducible, and interpretable for both scientific exploration and educational purposes.
+
+Recruiters and scientists can use this repository to quickly see experience with **Python, Conda, Jdaviz, and DataCube pipelines** for astrophysical analysis.
+
+[![Python](https://img.shields.io/badge/python-3.10-blue.svg)]()
+[![Conda](https://img.shields.io/badge/conda-stenv-green.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
 ## 📌 Abstract
 
@@ -12,29 +28,52 @@ Our analysis revealed that IRAS-04385 is a **promising candidate in the search f
 
 ---
 
+## 📊 Results and Impact
+
+The spectroscopy data for IRAS-04385 shows **distinct peaks at the 7 nm and 15 nm wavelengths**, both highly associated with water. These findings strengthen the case for IRAS-04385 as a promising location in the search for life-supporting environments.
+
+Our work contributes to reproducibility in JWST data analysis and expands the open-access tools available to the astronomy community. By demonstrating a full pipeline from **raw JWST data to visualized spectra**, this repository helps lower barriers for future researchers.
+
+---
+
 ## 🔮 Future Directions
 
 Beyond reproducing scientific findings, this project lays the foundation for **future innovations and data exploration**:
 
 ### 3D Galaxy Mapping
 
+<details>
+<summary>Expand for details</summary>
+
 - Building **3D models of the universe** using **infrared intensity and distance as axes**, creating interactive galactic maps.
-- Incorporating **graphs comparing distances from Earth** across observed stellar systems using red shift.
+- Incorporating **graphs comparing distances from Earth** across observed stellar systems using redshift.
 - Using **predictive modeling with path exclusion** to interpolate unexplored regions of space.
-- Integrating links to open datasets from [data.nasa.gov](https://data.nasa.gov) and outreach material such as [JWST Webinars](https://www.stsci.edu/jwst/science-execution/jwebbinars).
+- Integrating links to open datasets from [data.nasa.gov](https://data.nasa.gov).
 - Embedding **QR codes** to allow interactive exploration within visualizations.
+
+</details>
 
 ### DataCube Applications for JWST
 
+<details>
+<summary>Expand for details</summary>
+
 - Developing **DataCube analysis pipelines** for large JWST datasets.
-- Exploring connections to projects like **Q3Dfit** (spectral cube fitting) for galaxy analysis.
+- Exploring connections to projects like **Q3Dfit** for galaxy analysis.
 - Using **lmfit (Python)** for non-linear spectral fitting.
 - Applying **ppxf (Penalized Pixel-Fitting)** for stellar population and kinematic modeling.
 
+</details>
+
 ### Automation and Computer Vision
+
+<details>
+<summary>Expand for details</summary>
 
 - Creating **computer vision pipelines** to automatically sift through JWST data at scale.
 - Targeting discovery of **the oldest galaxies and stellar structures** in the universe.
+
+</details>
 
 ---
 
@@ -69,6 +108,9 @@ This project was completed as part of a **week-long data science coding marathon
 
 ### Participation Guidelines
 
+<details>
+<summary>Expand for guidelines</summary>
+
 - All work on the project must be completed during Love Data Week (Feb. 12–16).
 - Teams may seek advice from organizers, librarians, and specialists.
 - Projects must be chosen from the approved topic pool.
@@ -78,14 +120,7 @@ This project was completed as part of a **week-long data science coding marathon
 - Deliverables include a **digital poster** and uploaded **final dataset** to TXST online repositories (deadline: 1:00 pm, Feb. 16).
 - Teams must present their project in a **5–10 minute oral presentation** alongside their digital poster.
 
-### Tools and Resources Provided
-
-- Open data resources
-- Example research questions & datasets
-- Research Data Management (RDM) best practices
-- Instructions for depositing the final project into repositories
-- Data citation guidelines
-- Open access books on **R for data analysis and visualization**
+</details>
 
 ---
 
@@ -115,6 +150,8 @@ We used data from [Dr. Andrea Banzatti](https://news.txst.edu/research-and-innov
 
 ## 4. Project Files
 
+<details>
+<summary>Expand for dataset table</summary>
 
 | ArchiveFileID | fileSetName               | productLevel   | targprop   | exp_type | program | pi_name          | opticalElements               |
 | --------------- | --------------------------- | ---------------- | ------------ | ---------- | --------- | ------------------ | ------------------------------- |
@@ -122,7 +159,7 @@ We used data from [Dr. Andrea Banzatti](https://news.txst.edu/research-and-innov
 | 81301248      | jw01640011001_04101_00001 | 1b, 2a, 2b, 2c | IRAS-04385 | MIR_MRS  | 1640    | Banzatti, Andrea | CH12;SHORT, CH34;SHORT, F770W |
 | …            | …                        | …             | …         | …       | …      | …               | …                            |
 
-*(Full dataset table retained, truncated here for readability.)*
+</details>
 
 ---
 
@@ -137,10 +174,11 @@ We used data from [Dr. Andrea Banzatti](https://news.txst.edu/research-and-innov
 
 ## 6. Setup Instructions
 
+<details>
+<summary>Expand for setup instructions</summary>
+
 1. Install [Miniconda](https://docs.anaconda.com/free/miniconda/index.html).
 2. Download the [STScI environment (stenv)](https://github.com/spacetelescope/stenv/releases).
-
-### Conda Environment Setup
 
 ```bash
 conda env create --name stenv --file "https://github.com/spacetelescope/stenv/releases/download/2024.02.05/stenv-Linux-X64-py3.10-2024.02.05.yaml"
@@ -151,32 +189,38 @@ conda install bottleneck
 conda install -c conda-forge notebook jupyterlab voila
 ```
 
-- [Jdaviz Installation Guide](https://jdaviz.readthedocs.io/en/latest/installation.html)
+</details>
 
 ---
 
 ## 7. Working with the Data
 
-### MIRI MRS Data
+<details>
+<summary>Expand for details</summary>
 
-- Found in the **OBS MODE = MIR_MRS** column.
+- **OBS MODE = MIR_MRS** column contains relevant files.
 - Data is split into **3 band lengths** (SHORT, MEDIUM, LONG), with **2 channels each (12, 34)**.
 - Analysis requires processing all 6 combinations.
 
 **File naming notes:**
 
-- \`*_uncal.fits\`: Uncalibrated input data.
-- Background calibration files are downloaded into the \`crds_cache\` folder automatically.
+- `*_uncal.fits`: Uncalibrated input data.
+- Background calibration files are downloaded into the `crds_cache` folder automatically.
+
+</details>
 
 ---
 
 ## 8. Processing Pipeline
 
+<details>
+<summary>Expand for details</summary>
+
 We used NASA’s [MRS_FlightNB1 Notebook](https://github.com/STScI-MIRI/MRS-ExampleNB/blob/main/Flight_Notebook1/MRS_FlightNB1.ipynb).
 
 **Steps:**
 
-1. Place all \`uncal\` files in a \`sci_input\` folder.
+1. Place all `uncal` files in a `sci_input` folder.
 2. Run the notebook **six times**, once per band/channel pair:
    - 12, SHORT
    - 12, MEDIUM
@@ -185,19 +229,10 @@ We used NASA’s [MRS_FlightNB1 Notebook](https://github.com/STScI-MIRI/MRS-Exam
    - 34, MEDIUM
    - 34, LONG
 
-```python
-use_ch = ''    # '12' or '34'
-use_band = ''  # 'SHORT', 'MEDIUM', 'LONG'
-```
-
 - Runtime: ~2 hours on listed system.
-- Output: \`spectra.png\` (master wavelength table) + multiple data cubes.
+- Output: `spectra.png` + multiple data cubes.
 
-### Cube Visualization
-
-```bash
-jdaviz --layout=cubeviz /path/to/cube.fits
-```
+</details>
 
 ---
 
@@ -217,4 +252,15 @@ jdaviz --layout=cubeviz /path/to/cube.fits
 
 ## 10. Final Deliverable
 
-![](docs/assets/Dataposter.png)
+![](docs/assets/Datathon_Poster.png)
+
+---
+
+## 🚀 Next Steps
+
+- Expand **computer vision pipelines** to automatically flag potential habitable systems in JWST datasets.
+- Integrate **interactive 3D galaxy maps** into online repositories for outreach.
+- Apply this workflow to **other protoplanetary disks** beyond IRAS-04385.
+
+---
+
