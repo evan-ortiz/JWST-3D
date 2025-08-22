@@ -217,4 +217,4 @@ jdaviz --layout=cubeviz /path/to/cube.fits
 
 ## 10. Final Deliverable
 
-![](docs/assets/Dataposter.pdf)
+![](docs/assets/Dataposter.png)
